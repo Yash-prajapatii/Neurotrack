@@ -40,7 +40,20 @@ Inspired by the idea of:
 
 ## 📸 Demo
 
+### Login
+<img width="680" height="324" alt="Login" src="https://github.com/user-attachments/assets/b5dabced-b6d0-42a9-970e-5f2b0c2e9ab2" />
 
+### Dashboard
+<img width="1254" height="549" alt="Dashboard" src="https://github.com/user-attachments/assets/b52bc2e3-54ad-4d26-ac03-766d51d19206" />
+
+### Neural Activity
+<img width="1264" height="689" alt="Neural" src="https://github.com/user-attachments/assets/7b953a73-cbad-4c37-839d-eed66fb08a6f" />
+
+### Session Graph
+<img width="1266" height="764" alt="Session" src="https://github.com/user-attachments/assets/e4b13bc2-44e2-4e99-867b-627f5ad131c8" />
+
+### Insights
+<img width="1265" height="750" alt="Tips" src="https://github.com/user-attachments/assets/40cf0d90-d317-4997-bfa8-3691c2debf74" />
 
 ---
 
