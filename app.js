@@ -35,13 +35,32 @@ function setMode(mode) {
 // ⏱ SESSION TIMER
 setInterval(() => {
   seconds++;
-  document.getElementById("timer").innerText = "Session: " + seconds + "s";
+  const timerEl = document.getElementById("timer");
+  if (timerEl) {
+    timerEl.innerText = "Session: " + seconds + "s";
+  }
 }, 1000);
 
-// 🧠 MAIN DATA LOOP
-async function fetchData() {
-  const res = await fetch("http://127.0.0.1:8000/signal");
-  const data = await res.json();
+// 🧠 FAKE DATA GENERATOR (for deployment)
+function generateFakeData() {
+  let signal = [];
+
+  for (let i = 0; i < 50; i++) {
+    signal.push(Math.sin(i / 5) + Math.random() * 0.3);
+  }
+
+  let focus = Math.floor(Math.random() * 60) + 40;
+
+  return {
+    signal: signal,
+    focus: focus,
+    status: focus < 60 ? "LOW" : "HIGH",
+  };
+}
+
+// 🧠 MAIN LOOP
+function fetchData() {
+  const data = generateFakeData();
 
   // 🎛 MODE IMPACT
   let adjustedFocus = data.focus;
@@ -82,7 +101,7 @@ async function fetchData() {
 
   document.getElementById("coach").innerText = coaching;
 
-  // 📈 HISTORY TRACK
+  // 📈 HISTORY
   historyData.push(adjustedFocus);
   labels.push(labels.length + 1);
 
@@ -151,4 +170,5 @@ function updateHistoryChart() {
   }
 }
 
+// 🚀 START LOOP
 setInterval(fetchData, 1000);
