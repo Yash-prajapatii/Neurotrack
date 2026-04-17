@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NeuroTrack</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+    <h1>🧠 NeuroTrack</h1>
+    <p>Understand your brain. Improve your performance.</p>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="login()">Start Session</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+<nav>
+    <h2>NeuroTrack</h2>
+    <div>
+        <button onclick="showPage('dashboard')">Dashboard</button>
+        <button onclick="showPage('insights')">Insights</button>
+    </div>
+</nav>
+
+<h2 id="welcome"></h2>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page active">
+
+<div class="controls">
+    <button onclick="setMode('Work')">💻 Work</button>
+    <button onclick="setMode('Study')">📚 Study</button>
+    <button onclick="setMode('Athlete')">🏃 Athlete</button>
+</div>
+
+<h3 id="mode">Mode: Work</h3>
+
+<h3 id="timer">Session: 0s</h3>
+
+<div class="metrics">
+
+<div class="card blue">
+    <h1 id="focus">--</h1>
+    <p>Focus</p>
+</div>
+
+<div class="card purple">
+    <h1 id="fatigue">--</h1>
+    <p>Fatigue</p>
+</div>
+
+<div class="card green">
+    <h1 id="performance">--</h1>
+    <p>Performance</p>
+</div>
+
+<div class="card orange">
+    <h1 id="status">--</h1>
+    <p>Status</p>
+</div>
+
+</div>
+
+<h3>🧠 Neural Activity</h3>
+<canvas id="chart"></canvas>
+
+<h3>📊 Session Timeline</h3>
+<canvas id="historyChart"></canvas>
+
+<h3>🧠 Smart Coaching</h3>
+<p id="coach"></p>
+
+<p id="alert"></p>
+
+</div>
+
+<!-- INSIGHTS -->
+<div id="insights" class="page">
+
+    <h2>🧠 Cognitive Intelligence Guide</h2>
+    
+    <div class="insights-container">
+    
+        <!-- LOW FOCUS -->
+        <div class="insight-card">
+            <h3>🔻 Low Focus State</h3>
+            <p>Your brain is experiencing fatigue and reduced efficiency.</p>
+    
+            <h4>⚠️ Symptoms</h4>
+            <ul>
+                <li>Difficulty concentrating</li>
+                <li>Frequent distractions</li>
+                <li>Slow thinking speed</li>
+                <li>Mental exhaustion</li>
+            </ul>
+    
+            <h4>🛠 What to Do</h4>
+            <ul>
+                <li>Take a 5–10 minute break</li>
+                <li>Drink water and relax your eyes</li>
+                <li>Walk or stretch briefly</li>
+                <li>Switch to low-effort tasks</li>
+            </ul>
+    
+            <h4>🚫 Avoid</h4>
+            <ul>
+                <li>Deep work tasks</li>
+                <li>Multitasking</li>
+                <li>Heavy screen exposure</li>
+            </ul>
+        </div>
+    
+        <!-- MEDIUM FOCUS -->
+        <div class="insight-card">
+            <h3>⚡ Moderate Focus State</h3>
+            <p>Your brain is stable but not at peak performance.</p>
+    
+            <h4>⚙️ Best Use</h4>
+            <ul>
+                <li>Routine work</li>
+                <li>Meetings or discussions</li>
+                <li>Practice tasks</li>
+            </ul>
+    
+            <h4>💡 Tips</h4>
+            <ul>
+                <li>Reduce distractions</li>
+                <li>Use short focus intervals</li>
+                <li>Prepare for deep work phase</li>
+            </ul>
+    
+            <h4>🎯 Goal</h4>
+            <ul>
+                <li>Transition into high focus state</li>
+            </ul>
+        </div>
+    
+        <!-- HIGH FOCUS -->
+        <div class="insight-card">
+            <h3>🚀 High Focus State</h3>
+            <p>You are in peak cognitive performance.</p>
+    
+            <h4>🔥 Best Use</h4>
+            <ul>
+                <li>Deep work</li>
+                <li>Problem solving</li>
+                <li>Learning complex concepts</li>
+            </ul>
+    
+            <h4>📈 Maximize Output</h4>
+            <ul>
+                <li>Work without interruption</li>
+                <li>Silence notifications</li>
+                <li>Stay in flow state</li>
+            </ul>
+    
+            <h4>⚠️ Maintain</h4>
+            <ul>
+                <li>Avoid context switching</li>
+                <li>Do not break momentum</li>
+            </ul>
+        </div>
+    
+    </div>
+    
+    </div>
+<script src="app.js"></script>
+
+</body>
+</html>
