@@ -5,6 +5,9 @@ NeuroTrack is a real-time cognitive monitoring system inspired by emerging neuro
 It simulates brain signal data and transforms it into actionable insights for performance, focus, and mental state optimization.
 
 ---
+## 🌐 Live Demo
+https://neurotrack-two.vercel.app/
+---
 
 ## 🚀 Features
 
